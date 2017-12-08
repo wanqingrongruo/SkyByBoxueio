@@ -65,6 +65,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="36l-iH-bhO">
+                                <rect key="frame" x="177" y="118" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfz-dE-re8">
+                                <rect key="frame" x="8" y="117" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u15-nA-2u9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
                                 <subviews>
@@ -150,11 +159,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="36l-iH-bhO" firstAttribute="centerY" secondItem="qbd-lc-MKx" secondAttribute="centerY" id="BzK-Va-wva"/>
+                            <constraint firstItem="Gfz-dE-re8" firstAttribute="centerY" secondItem="qbd-lc-MKx" secondAttribute="centerY" id="Cx2-yP-qGg"/>
+                            <constraint firstItem="QQG-ws-YeJ" firstAttribute="trailing" secondItem="Gfz-dE-re8" secondAttribute="trailing" constant="8" id="KXc-KO-rvh"/>
                             <constraint firstAttribute="trailing" secondItem="u15-nA-2u9" secondAttribute="trailing" id="PL5-PW-Dqx"/>
                             <constraint firstItem="u15-nA-2u9" firstAttribute="leading" secondItem="qbd-lc-MKx" secondAttribute="leading" id="QOL-hK-cir"/>
                             <constraint firstAttribute="bottom" secondItem="u15-nA-2u9" secondAttribute="bottom" id="aYo-ud-AHu"/>
+                            <constraint firstItem="36l-iH-bhO" firstAttribute="centerX" secondItem="qbd-lc-MKx" secondAttribute="centerX" id="gH9-eP-8EL"/>
                             <constraint firstItem="u15-nA-2u9" firstAttribute="top" secondItem="qbd-lc-MKx" secondAttribute="top" id="qXS-n4-p7m"/>
+                            <constraint firstItem="Gfz-dE-re8" firstAttribute="leading" secondItem="QQG-ws-YeJ" secondAttribute="leading" constant="8" id="tD0-x8-KKH"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="QQG-ws-YeJ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1X-rL-8Xh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -169,6 +184,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RcV-fn-Vnj"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49W-8m-Esm" userLabel="First Responder" sceneMemberID="firstResponder"/>
