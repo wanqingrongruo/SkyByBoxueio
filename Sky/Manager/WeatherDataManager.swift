@@ -25,7 +25,7 @@ final class WeatherDataManager {
     }
     
     // Single
-    static let shared = WeatherDataManager(baseURL: API.authenticateUrl, urlSession: URLSession.shared)
+    static let shared = WeatherDataManager(baseURL: API.authenticateUrl, urlSession: Config.urlSession)
     
     typealias CompletionHandler = (WeatherData?, DataManagerError?) -> Void
     
@@ -70,3 +70,28 @@ final class WeatherDataManager {
     }
 }
 
+internal class DarkSkyURLSession: URLSessionProtocol {
+    func dataTask(
+        with request: URLRequest,
+        completionHandler: @escaping DataTaskHandler)
+        -> URLSessionDataTaskProtocol {
+            return DarkSkyURLSessionDataTask(
+                request: request,
+                completion: completionHandler)
+    }
+}
+
+internal struct Config {
+    private static func isUITesting() -> Bool {
+        return ProcessInfo.processInfo.arguments.contains("UI-TESTING")
+    }
+    
+    static var urlSession: URLSessionProtocol = {
+        if isUITesting() {
+            return DarkSkyURLSession()
+        }
+        else {
+            return URLSession.shared
+        }
+    }()
+}

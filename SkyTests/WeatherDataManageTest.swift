@@ -30,22 +30,22 @@ class WeatherDataManageTest: XCTestCase {
         // 测试后需要清理的代码写在这里 --  warnning: 必须写在 super.tearDown() 前面 !!!!
         super.tearDown()
         
-       
+        
     }
     
     
     // 默认的两个测试方法 -- 可删
     // 所有的测试方法必须用 test 开头, xcode 才会识别它们并自动执行
-//    func testExample() {
-//        // This is an example of a functional test case.
-//        // Use XCTAssert and related functions to verify your tests produce the correct results.
-//    }
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measure {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
+    //    func testExample() {
+    //        // This is an example of a functional test case.
+    //        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //    }
+    //    func testPerformanceExample() {
+    //        // This is an example of a performance test case.
+    //        self.measure {
+    //            // Put the code you want to measure the time of here.
+    //        }
+    //    }
     
     
     func test_weatherDataAt_starts_the_session() {
@@ -131,6 +131,17 @@ class WeatherDataManageTest: XCTestCase {
             "time" : 1507180335,
             "summary" : "Light Snow"
         }
+       "daily": {
+            "data": [
+                {
+                    "time": 1507180335,
+                    "icon": "clear-day",
+                    "temperatureLow": 66,
+                    "temperatureHigh": 82,
+                    "humidity": 0.25
+                }
+            ]
+        }
     }
     """.data(using: .utf8)!
         session.responseData = data
@@ -145,6 +156,14 @@ class WeatherDataManageTest: XCTestCase {
                 decoded = d
         })
         
+        let expectedWeekData = WeatherData.WeekWeatherData(data: [
+            ForecastData(
+                time: Date(timeIntervalSince1970: 1507180335),
+                temperatureLow: 66,
+                temperatureHigh: 82,
+                icon: "clear-day",
+                humidity: 0.25)
+            ])
         let expected = WeatherData(
             latitude: 52,
             longitude: 100,
@@ -153,7 +172,8 @@ class WeatherDataManageTest: XCTestCase {
                 summary: "Light Snow",
                 icon: "snow",
                 temperature: 23,
-                humidity: 0.91))
+                humidity: 0.91),
+            daily: expectedWeekData)
         
         XCTAssertEqual(decoded, expected)
     }
@@ -172,5 +192,5 @@ extension WeatherDataManageTest {
      * 每一个测试用例，应该只测试一个内容，例如：测试resume()方法是否被调用了
      * 对于不属于我们自己的代码，例如：系统API、第三方框架等，我们要mock掉相关的代码以隔离它们对测试过程的影响；
      */
-
+    
 }
