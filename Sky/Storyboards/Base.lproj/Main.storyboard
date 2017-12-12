@@ -224,19 +224,19 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSi-B7-zvQ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSi-B7-zvQ">
                                                             <rect key="frame" x="15" y="11" width="279" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deceber 11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghl-zx-P5s">
-                                                            <rect key="frame" x="15" y="43" width="279" height="21"/>
+                                                            <rect key="frame" x="15" y="43" width="279" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9°C - 16 °C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-TH-Khp">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="9°C - 16 °C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-TH-Khp">
                                                             <rect key="frame" x="15" y="72" width="172.5" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -260,7 +260,7 @@
                                                         <constraint firstItem="PSi-B7-zvQ" firstAttribute="leading" secondItem="1YS-Rx-O6R" secondAttribute="leadingMargin" id="4fv-hl-oro"/>
                                                         <constraint firstItem="b8j-TH-Khp" firstAttribute="bottom" secondItem="1YS-Rx-O6R" secondAttribute="bottomMargin" id="8i3-X1-UPo"/>
                                                         <constraint firstItem="ghl-zx-P5s" firstAttribute="leading" secondItem="1YS-Rx-O6R" secondAttribute="leadingMargin" id="9KW-j0-ADa"/>
-                                                        <constraint firstItem="b8j-TH-Khp" firstAttribute="top" secondItem="ghl-zx-P5s" secondAttribute="bottom" constant="8" id="DBI-wj-QWa"/>
+                                                        <constraint firstItem="b8j-TH-Khp" firstAttribute="top" secondItem="ghl-zx-P5s" secondAttribute="bottom" constant="13" id="DBI-wj-QWa"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="cN8-yv-GxH" secondAttribute="trailing" id="JkW-MO-WuD"/>
                                                         <constraint firstItem="cN8-yv-GxH" firstAttribute="leading" secondItem="b8j-TH-Khp" secondAttribute="trailing" id="PhB-ZJ-QAY"/>
                                                         <constraint firstItem="Ntq-oa-9J9" firstAttribute="leading" secondItem="PSi-B7-zvQ" secondAttribute="trailing" constant="8" id="RiV-AK-Avc"/>
@@ -321,6 +321,6 @@
     <resources>
         <image name="LocationBtn" width="44" height="44"/>
         <image name="Setting" width="44" height="44"/>
-        <image name="clear-day" width="108" height="108"/>
+        <image name="clear-day" width="128" height="128"/>
     </resources>
 </document>
