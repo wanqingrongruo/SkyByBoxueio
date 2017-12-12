@@ -65,7 +65,7 @@ class CurrentWeatherViewController: WeatherViewController {
     
     
     func updateView() {
-//        activityIndicatorView.stopAnimating()
+        activityIndicatorView.stopAnimating()
 //
 //        if let now = now, let location = location {
 //            updateWeatherContainer(with: now, at: location)
